@@ -10,19 +10,20 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://Overfox-Company.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs-api-onreservy',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'overfox', // Usually your GitHub org/user name.
-  projectName: 'onreservy', // Usually your repo name.
+  organizationName: 'Overfox-Company', // Usually your GitHub org/user name.
+  projectName: 'docs-api-onreservy', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
