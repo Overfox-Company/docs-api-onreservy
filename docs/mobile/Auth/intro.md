@@ -32,20 +32,20 @@ The API will return the message, the user data, status and the session token, in
 
     ```typescript
 {
-    "message": "login google succes",
-    "token": token,
-    "client_user": {
-        "_id":string,
-        "user": string,
-        "email": string,
-        "name": string,
-        "password": string,
-        "lastName": string,
-        "phone": string | null,
-        "avatar": string | null,
-        "googleId": string | null,
-        "createdAt": string,
-        "updatedAt": string,
+    message: "login google succes",
+    token: token,
+    client_user: {
+        _id: string,
+        user: string,
+        email: string,
+        name: string,
+        password: string,
+        lastName: string,
+        phone: string | null,
+        avatar: string | null,
+        googleId: string | null,
+        createdAt: string,
+        updatedAt: string,
     }
 }
 ```
