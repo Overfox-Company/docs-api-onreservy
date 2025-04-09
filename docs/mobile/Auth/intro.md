@@ -46,9 +46,7 @@ The API will return the message, the user data, status and the session token, in
         "googleId": string | null,
         "createdAt": string,
         "updatedAt": string,
-      
-    },
-    "status": 200
+    }
 }
 ```
 ### <span style={{color: "rgb(255, 39, 39)"}}>Failure</span>
@@ -56,39 +54,34 @@ The API will return the message, the user data, status and the session token, in
 In case the request body is empty:
 ```json
 {
-    "message": "Empty body",
-    "status": 400
+    "message": "Empty body"
 }
 ```
 In case a json format is not sent in the request body:
 
 ```json
 {
-    "message": "Invalid JSON",
-    "status": 400
+    "message": "Invalid JSON"
 }
 ```
 In case **`google_token`** parameter is not provided
 
 ```json
 { 
-    "message": "No token provided", 
-    "status": 401 
+    "message": "No token provided"
 }
 ```
 In case the token is invalid:
 
 ```json
 {
-    "message": "Invalid token",
-    "status": 401
+    "message": "Invalid token"
 }
 ```
 In case the token is expired:
 
 ```json
 {
-    "message": "Token used too late",
-    "status": 401
+    "message": "Token used too late"
 }
 ```
