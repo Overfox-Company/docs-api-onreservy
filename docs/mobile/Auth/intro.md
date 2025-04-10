@@ -23,8 +23,8 @@ POST https://www.onreservy.com/api/mobile/login/google
 you make a request to the endpoint with the token you get from Google after the user has logged in, when google returns you the token id you must send it in JSON format as follows:
 ```json
 {
-  "device": "ios" | "android" | "web",
-  "google_token": token
+  device: "ios" | "android" | "web",
+  google_token: token
 }
 ```
 
