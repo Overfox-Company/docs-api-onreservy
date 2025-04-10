@@ -139,7 +139,7 @@ POST https://www.onreservy.com/api/mobile/register/credentials
 The API will return the message, the user data, status and the session token. 
 [client_user_schema](../../models/clientUser#client-user-schema)
 
-    ```typescript
+```typescript
 {
     message: "Register credentials success",
     token: token,
