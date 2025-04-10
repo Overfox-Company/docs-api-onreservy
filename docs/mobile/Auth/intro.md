@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import UserSchema from '@site/src/models/users/userSchema.mdx'
+
 # OAuth google v2
 
 This is a simple example of how to use OAuth 2.0 with Google in a React Native app.
@@ -21,32 +23,23 @@ POST https://www.onreservy.com/api/mobile/login/google
 you make a request to the endpoint with the token you get from Google after the user has logged in, when google returns you the token id you must send it in JSON format as follows:
 ```json
 {
-  "google_token": "token"
+  "device": "ios" | "android" | "web",
+  "google_token": token
 }
 ```
+
 
 ## Responses
 
 ###   <span style={{color: "rgb(161, 255, 39)"}}>Success</span>
-The API will return the message, the user data, status and the session token, in case the user does not exist, it will be created automatically.
+The API will return the message, the user data, status and the session token, in case the user does not exist, it will be created automatically. [client_user_schema](../../models/clientUser#client-user-schema)
 
-    ```typescript
+
+```ts
 {
     message: "login google succes",
     token: token,
-    client_user: {
-        _id: string,
-        user: string,
-        email: string,
-        name: string,
-        password: string,
-        lastName: string,
-        phone: string | null,
-        avatar: string | null,
-        googleId: string | null,
-        createdAt: string,
-        updatedAt: string,
-    }
+    client_user: client_user_schema
 }
 ```
 ### <span style={{color: "rgb(255, 39, 39)"}}>Failure</span>

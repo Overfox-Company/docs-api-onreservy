@@ -39,26 +39,13 @@ POST https://www.onreservy.com/api/mobile/login/credentials
 
 ####   <span style={{color: "rgb(161, 255, 39)"}}>Success</span>
 The API will return the message, the user data, status and the session token.
+[client_user_schema](../../models/clientUser#client-user-schema)
 
-    ```typescript
+```typescript
 {
     message: "Login credentials success",
     token: token,
-    client_user: {
-        _id: string,
-        user: string,
-        email: string,
-        name:string,
-        password: string,
-        lastName: string,
-        phone: string,
-        avatar:string | null,
-        verified: boolean,
-        googleId: string | null,
-        createdAt: string,
-        updatedAt: string,
-       
-    }
+    client_user: client_user_schema
 }
 ```
 
@@ -146,27 +133,14 @@ POST https://www.onreservy.com/api/mobile/register/credentials
 ### Responses
 
 ####   <span style={{color: "rgb(161, 255, 39)"}}>Success</span>
-The API will return the message, the user data, status and the session token.
+The API will return the message, the user data, status and the session token. 
+[client_user_schema](../../models/clientUser#client-user-schema)
 
     ```typescript
 {
     message: "Register credentials success",
     token: token,
-    client_user: {
-        _id: string,
-        user: string,
-        email: string,
-        name:string,
-        password: string,
-        lastName: string,
-        phone: string,
-        avatar:string | null,
-        verified: boolean,
-        googleId: string | null,
-        createdAt: string,
-        updatedAt: string,
-       
-    }
+    client_user: client_user_schema
 }
 ```
 #### <span style={{color: "rgb(255, 39, 39)"}}>Failure</span>
