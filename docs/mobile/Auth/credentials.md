@@ -32,6 +32,7 @@ POST https://www.onreservy.com/api/mobile/login/credentials
 {
     email: string,
     password: string,
+
 }
 ```
 
@@ -128,6 +129,8 @@ POST https://www.onreservy.com/api/mobile/register/credentials
     email: string,
     password: string,
     repeat_password: string,
+    phone: string,
+    user_name: string,
 }
 ```
 ### Responses
