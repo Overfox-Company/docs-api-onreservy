@@ -1,0 +1,47 @@
+# Busnisses model
+
+This modeling system is designed to flexibly and scalably represent the complete structure of a business that offers schedulable services and/or inventory products, such as a barbershop, workshop or specialty store.
+
+The business model is constituted by several extra parameters:
+
+- `Business`: Contains basic business data
+- `Workers`: Contains the data of the workers of the business, as well as allows to establish the working hours of the business.
+- `Products`: Contains the data of the products offered for sale by the business.
+- `Services`: Contains the details of the services offered by the business for booking appointments.
+- `Locations`: Contains the necessary data about the location of the business for an effective positioning in the app.
+- `Schedule`: Allows the business to establish the hours it will be working and the days it will not be open.
+
+falta añadir como hacer las reservas
+
+
+## Business
+import  BusinessSchema from '@site/src/models/business/BusinessSchema.mdx';
+
+<BusinessSchema />
+
+## Workers
+import WorkerSchema from '@site/src/models/business/WorkerScheme.mdx';
+
+<WorkerSchema />
+
+## Products
+
+import ProductSchema from '@site/src/models/business/ProductSchema.mdx';
+
+<ProductSchema />
+
+## Services
+
+import ServiceSchema from '@site/src/models/business/ServiceScheme.mdx';
+
+<ServiceSchema />
+
+## Locations
+import LocationSchema from '@site/src/models/business/LocationScheme.mdx';
+
+<LocationSchema />
+
+## Schedule
+import ScheduleSchema from '@site/src/models/business/ScheduleSchema.mdx';
+
+<ScheduleSchema />
