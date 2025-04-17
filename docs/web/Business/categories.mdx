@@ -1,0 +1,64 @@
+# Get Categories
+
+## Endpoint
+
+```ts
+GET https://www.onreservy.com/api/web/categories
+```
+
+## Use
+In order to get the categories list, you need to provide the session token through the request header like this:
+```ts
+Authorization: Bearer token
+```
+
+## Responses
+
+###   <span style={{color: "rgb(161, 255, 39)"}}>Success</span>
+The API will return the message,  the categories list.
+
+
+```ts
+[
+  "categories": [
+        {
+            "id": 1,
+            "name": "restaurants"
+        },
+        {
+            "id": 2,
+            "name": "barber shops"
+        },
+        {
+            "id": 3,
+            "name": "gyms"
+        },
+        {
+            "id": 4,
+            "name": "veterinarian"
+        },
+        {
+            "id": 5,
+            "name": "spa"
+        },
+        {
+            "id": 6,
+            "name": "tattoos"
+        },
+        {
+            "id": 7,
+            "name": "coffee"
+        }
+    ]
+]
+```
+
+### <span style={{color: "rgb(255, 39, 39)"}}>Failure</span>
+
+In the event that a token is not sent or is invalid, the API will return a 401 status code with the following message:
+
+```json
+{
+     "message": "Unauthorized"
+}
+```

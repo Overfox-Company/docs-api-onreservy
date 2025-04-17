@@ -15,7 +15,7 @@ Authorization: Bearer token
 ## Responses
 
 ###   <span style={{color: "rgb(161, 255, 39)"}}>Success</span>
-The API will return the message,  the business list, status and the session token. [business_schema](../../models/business##business)
+The API will return the message,  the business list. [business_schema](../../models/business##business)
 
 
 ```ts
@@ -31,11 +31,5 @@ In the event that a token is not sent or is invalid, the API will return a 401 s
 ```json
 {
      "message": "Unauthorized"
-}
-```
-in case a user with the token id is not found:
-```json
-{
-     "message": "User not found"
 }
 ```
