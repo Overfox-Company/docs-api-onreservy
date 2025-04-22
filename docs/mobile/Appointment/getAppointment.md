@@ -53,6 +53,7 @@ POST https://www.onreservy.com/api/mobile/appointments/getAppointments
 ### <span style={{color: "rgb(255, 39, 39)"}}>Failure</span>
 
 This error occurs when the authorization token is missing, invalid, or could not be verified.
+
 ```json
 {
   "message": "no autorizado"

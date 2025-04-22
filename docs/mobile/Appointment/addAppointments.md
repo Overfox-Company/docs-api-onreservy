@@ -133,7 +133,6 @@ One or more required fields (`services`, `date`, `time`, `business_id`) are miss
   "message": "Client not found"
 }
 ```
-The client associated with the token was not found.
 
 The `business_id` provided does not match any existing business.
 
