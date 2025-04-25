@@ -28,7 +28,7 @@ Authorization: Bearer token
 {
     "like_lists": [
         {
-            "action": "create-list",
+            "action": "delete-list",
             "id": "string"
         },
     ]
