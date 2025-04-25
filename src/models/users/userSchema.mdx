@@ -3,15 +3,32 @@
     _id: string,
     user: string,
     email: string,
-    name:string,
+    name: string,
     password: string,
     lastName: string,
-    phone: string,
-    avatar:string | null,
+    phone: string | null | undefined,
+    avatar: string | null | undefined,
     verified: boolean,
-    googleId: string | null,
+    googleId: string | null | undefined,
     appleId: string | null,
     bookings: booking_schema[],
     createdAt: string,
     updatedAt: string,
+    list_liked_business: {
+        _id?: string;
+        name: string;
+        business_id: string[];
+    }[],
+    notifications:{
+        status: string;
+        appointment_id: string;
+        business_data: {
+            name: string;
+            avatar: string;
+            _id: string;
+        };
+        message: string;
+        read: boolean;
+}[];
 }
+```
