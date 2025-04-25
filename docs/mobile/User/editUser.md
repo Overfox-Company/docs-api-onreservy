@@ -15,8 +15,7 @@ Authorization: Bearer token
 #### Creatye lists
 ```json
 {
-    "like_lists": 
-        {
+    "like_lists":{
             "action": "create-list",
             "name": "string"
         },
@@ -25,8 +24,7 @@ Authorization: Bearer token
 #### Delete lists
 ```json
 {
-    "like_lists": 
-        {
+    "like_lists":{
             "action": "delete-list",
             "id": "string"
         },
@@ -37,8 +35,7 @@ Authorization: Bearer token
 #### Add business to list
 ```json
 {
-    "like_lists": 
-        {
+    "like_lists":{
             "action": "add-business",
             "list_id": "string",
             "business_id": "string"
