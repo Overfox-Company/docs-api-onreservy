@@ -10,6 +10,43 @@ In order to update the user, you need to provide the session token through the r
 ```ts
 Authorization: Bearer token
 ```
+### Likes
+
+#### Creatye lists
+```json
+{
+    "like_lists": [
+        {
+            "action": "create-list",
+            "name": "string"
+        },
+    ]
+}
+```
+#### Delete lists
+```json
+{
+    "like_lists": [
+        {
+            "action": "create-list",
+            "id": "string"
+        },
+    ]
+}
+```
+
+#### Add business to list
+```json
+{
+    "like_lists": [
+        {
+            "action": "add-business",
+            "list_id": "string",
+            "business_id": "string"
+        },
+    ]
+}
+```
 
 ## Responses
 ### <span style={{color: "rgb(161, 255, 39)"}}>Success</span>
