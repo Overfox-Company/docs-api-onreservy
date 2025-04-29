@@ -42,7 +42,16 @@ Authorization: Bearer token
         },
 }
 ```
-
+#### Delete business to list
+```json
+{
+    "like_lists": {
+        "action":"delete-business",
+        "list_id": string,
+        "business_id": string
+ }
+}
+```
 ## Responses
 ### <span style={{color: "rgb(161, 255, 39)"}}>Success</span>
 The API will return the message, the user data, status and the session token. [client_user_schema](../../models/clientUser#client-user-schema)
