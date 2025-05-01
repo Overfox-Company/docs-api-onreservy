@@ -26,7 +26,6 @@ POST https://www.onreservy.com/api/mobile/appointments/getAppointments
       "services": [
         {
           "original_service_id": "service _id",
-          "worker_id": "id of the worker",
           "name": "Service name",
           "description": "Service description",
           "price": 25,
