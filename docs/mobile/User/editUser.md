@@ -19,9 +19,25 @@ You can send one or more of the following parameters in the JSON body:
 |------------------|---------|-----------------------------------------------------------------------------|
 | `user_name`      | string  | New username.                                                               |
 | `phone`          | string  | New phone number.                                                           |
-| `email`          | string  | New email address.                                                          |
+| `email`          | string  | New email address. Requires a verification code (see below).                |
+| `code`           | string  | Verification code required to change the email address.                     |
 | `like_lists`     | object  | Actions for managing favorite business lists (see below).                   |
 | `notifications`  | object  | Actions for managing user notifications (see below).                        |
+
+---
+
+### Change Email
+
+To change the user's email, you must provide both the new email and a valid verification code in the request body:
+
+```json
+{
+  "email": "new@email.com",
+  "code": "123456"
+}
+```
+
+If the `code` is missing or invalid, the API will return an error.
 
 ---
 
@@ -219,5 +235,26 @@ Notification not found
 ```json
 {
   "message": "Notification not found"
+}
+```
+
+Invalid email format  
+```json
+{
+  "message": "Invalid email format"
+}
+```
+
+Code is required for change email  
+```json
+{
+  "message": "Code is required for change email"
+}
+```
+
+Invalid or expired code  
+```json
+{
+  "message": "Invalid or expired code"
 }
 ```
