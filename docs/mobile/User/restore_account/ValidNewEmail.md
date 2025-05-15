@@ -2,7 +2,7 @@
 
 ## Endpoint
 ```ts
-POST https://www.onreservy.com/api/mobile/restore-account/validNewEmai
+POST https://www.onreservy.com/api/mobile/restore-account/validNewEmail
 ```
 
 ## Use
