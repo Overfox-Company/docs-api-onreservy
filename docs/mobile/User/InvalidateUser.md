@@ -2,17 +2,23 @@
 
 ## Endpoint
 ```ts
-GET https://www.onreservy.com/api/mobile/user/invalidateUser
+POST https://www.onreservy.com/api/mobile/user/invalidateUser
 ```
 
 ## Use
-To deactivate (invalidate) the user's account, send a GET request to this endpoint.  
+To deactivate (invalidate) the user's account, send a POST request to this endpoint whit the password parameter.  
 You must include the user's session token in the request header:
 
 ```ts
 Authorization: Bearer token
 ```
 
+```json
+{
+
+  "password": "passwrord"
+}
+```
 ---
 
 ## Responses
@@ -37,7 +43,12 @@ User not found
   "message": "User not found"
 }
 ```
-
+Incorrect password  
+```json
+{
+  "message": "Incorrect password"
+}
+```
 Internal server error  
 ```json
 {
