@@ -9,14 +9,16 @@ POST https://www.onreservy.com/api/mobile/user/invalidateUser
 To deactivate (invalidate) the user's account, send a POST request to this endpoint whit the password parameter.  
 You must include the user's session token in the request header:
 
+If the user wants to leave feedback on why he/she decides to delete the account, send the message parameter, this parameter is optional.
+
 ```ts
 Authorization: Bearer token
 ```
 
 ```json
 {
-
-  "password": "passwrord"
+  "password": "passwrord",
+  "message": "User feedback"
 }
 ```
 ---
