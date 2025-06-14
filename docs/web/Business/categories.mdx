@@ -3,7 +3,7 @@
 ## Endpoint
 
 ```ts
-GET https://www.onreservy.com/api/web/categories
+GET https://www.onreservy.com/api/web/business/categories/getCategories
 ```
 
 ## Use
@@ -21,34 +21,30 @@ The API will return the message,  the categories list.
 ```ts
 {
       "message": "categories",
-  "categories": [
+  "categories":  [
         {
-            "id": 1,
-            "name": "restaurants"
+            "_id": "684c32ab2c42faed2bf47d80",
+            "icon": "https://res.cloudinary.com/dvr4qmnwx/image/upload/v1749824164/onreservy/5a27d06d-524e-4a27-9e62-6941d1fe9f75/Icon.png_%249d309a32-89a7-4af0-bbf2-7e60b58066eb.png",
+            "name": "Restaurants",
+            "createdAt": "2025-06-13T14:16:11.743Z",
+            "updatedAt": "2025-06-13T14:16:11.743Z",
+            "__v": 0
         },
         {
-            "id": 2,
-            "name": "barber shops"
+            "_id": "684c54ab133ac6a994667a15",
+            "icon": "https://res.cloudinary.com/dvr4qmnwx/image/upload/v1749832867/onreservy/cb8f3e87-8576-478e-90a3-6d3b350c4087/Icon%20%281%29.png_%24e57b2175-5000-4b72-afb3-60b52f8c5807.png",
+            "name": "Barbers",
+            "createdAt": "2025-06-13T16:41:15.273Z",
+            "updatedAt": "2025-06-13T16:41:15.273Z",
+            "__v": 0
         },
         {
-            "id": 3,
-            "name": "gyms"
-        },
-        {
-            "id": 4,
-            "name": "veterinarian"
-        },
-        {
-            "id": 5,
-            "name": "spa"
-        },
-        {
-            "id": 6,
-            "name": "tattoos"
-        },
-        {
-            "id": 7,
-            "name": "coffee"
+            "_id": "684c54c4133ac6a994667a18",
+            "icon": "https://res.cloudinary.com/dvr4qmnwx/image/upload/v1749832893/onreservy/4e4a15cc-9282-471b-95ea-401369d10b34/Icon%20%282%29.png_%2445067ce2-ef5b-47be-b781-5cb4cdb88923.png",
+            "name": "Pets",
+            "createdAt": "2025-06-13T16:41:40.622Z",
+            "updatedAt": "2025-06-13T16:41:40.622Z",
+            "__v": 0
         }
     ]
 }
