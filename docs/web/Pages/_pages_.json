@@ -1,0 +1,8 @@
+{
+  "label": "Page",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Here you will find the different models used at onreservy."
+  }
+}

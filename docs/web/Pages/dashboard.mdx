@@ -1,0 +1,194 @@
+# Dashboard
+
+## Endpoint
+
+```ts
+GET https://www.onreservy.com/api/web/pages/dashboard/getBusinessInfo?business_id={string}&version={mobile|desktop}
+```
+
+## Use
+To retrieve business information, you need to provide the session token through the request header as follows:
+
+```ts
+Authorization: Bearer token
+```
+
+Additionally, you must include the following query parameters:
+- `business_id` (string): The ID of the business.
+- `version` (string): The version of the response, either `mobile` or `desktop`.
+
+## Responses
+
+### <span style={{color: "rgb(161, 255, 39)"}}>Success</span>
+The API will return a JSON object containing detailed business information. The response varies depending on the `version` parameter.
+
+#### Mobile Version
+```json
+{
+  "business": {
+    "icomes": number,
+    "payments": number,
+    "appointments": number,
+    "clients": number,
+    "profits": {
+      "all": {
+        "totalSells": number,
+        "totalTips": number,
+        "totalAppointments": number
+      },
+      "today": {
+        "totalSells": number,
+        "totalTips": number,
+        "totalAppointments": number
+      },
+      "week": {
+        "totalSells": number,
+        "totalTips": number,
+        "totalAppointments": number
+      },
+      "twoWeeks": {
+        "totalSells": number,
+        "totalTips": number,
+        "totalAppointments": number
+      },
+      "month": {
+        "totalSells": number,
+        "totalTips": number,
+        "totalAppointments": number
+      },
+      "year": {
+        "totalSells": number,
+        "totalTips": number,
+        "totalAppointments": number
+      }
+    },
+    "comercialManagement": {
+      "workeers": number,
+      "clients": number,
+      "AppointmentsLimits": number
+    }
+  }
+}
+```
+
+#### Desktop Version
+```json
+{
+  "business": {
+    "icomes": number,
+    "payments": number,
+    "appointments": number,
+    "clients": number,
+    "profits": {
+      "totalSells": {
+        "days": {
+          "labels": [
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat"
+          ],
+          "data": [number, number, number, number, number, number, number]
+        },
+        "months": {
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ],
+          "data": [number, number, number, number, number, number, number, number, number, number, number, number]
+        }
+      },
+      "totalTips": {
+        "days": {
+          "labels": [
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat"
+          ],
+          "data": [number, number, number, number, number, number, number]
+        },
+        "months": {
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ],
+          "data": [number, number, number, number, number, number, number, number, number, number, number, number]
+        }
+      },
+      "totalAppointments": {
+        "days": {
+          "labels": [
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat"
+          ],
+          "data": [number, number, number, number, number, number, number]
+        },
+        "months": {
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ],
+          "data": [number, number, number, number, number, number, number, number, number, number, number, number]
+        }
+      }
+    },
+    "comercialManagement": {
+      "workeers": number,
+      "clients": number,
+      "AppointmentsLimits": number
+    }
+  }
+}
+```
+
+### <span style={{color: "rgb(255, 39, 39)"}}>Failure</span>
+If an error occurs, the API will return a 500 status code with the following message:
+
+```json
+{
+  "message": "error in get business info route",
+  "error": "<error details>"
+}
+```
